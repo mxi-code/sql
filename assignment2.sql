@@ -25,7 +25,7 @@ All the other rows will remain the same. */
 
 SELECT 
 product_name || ', ' || product_size|| ' (' || product_qty_type || ')'
-FROM product
+FROM product;
 
 SELECT
     COALESCE(product_name, '') || ', ' ||
