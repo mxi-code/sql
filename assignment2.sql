@@ -24,13 +24,7 @@ All the other rows will remain the same. */
 --QUERY 1
 
 SELECT 
-product_name || ', ' || product_size|| ' (' || product_qty_type || ')'
-FROM product;
-
-SELECT
-    COALESCE(product_name, '') || ', ' ||
-    product_size || ' (' ||
-    COALESCE(product_qty_type, 'unit') || ')'
+product_name || ', ' || COALESCE(product_size, '') || ' (' || COALESCE(product_qty_type, 'unit') || ')'
 FROM product;
 
 
